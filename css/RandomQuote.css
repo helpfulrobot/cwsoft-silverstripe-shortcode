@@ -1,0 +1,20 @@
+/**
+ * This file contains the CSS definitions for the shortcode [RandomQuote]
+ * 
+ * LICENSE: GNU General Public License 3.0
+ * 
+ * @platform    CMS Silverstripe 2.4.5
+ * @package     silverstripe-shortcode
+ * @author      cwsoft (http://cwsoft.de)
+ * @version     1.0.0
+ * @copyright   cwsoft
+ * @license     http://www.gnu.org/licenses/gpl.html
+*/
+
+/* CSS for random quote short code */
+div.cwsRandomQuote {
+	float: right;
+	width: 90%;
+	margin: 0 5% 1.5em 5%;
+	text-align: center;
+}

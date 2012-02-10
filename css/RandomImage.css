@@ -1,0 +1,22 @@
+/**
+ * This file contains the CSS definitions for the shortcode: [RandomImage]
+ * 
+ * LICENSE: GNU General Public License 3.0
+ * 
+ * @platform    CMS Silverstripe 2.4.5
+ * @package     silverstripe-shortcode
+ * @author      cwsoft (http://cwsoft.de)
+ * @version     1.0.0
+ * @copyright   cwsoft
+ * @license     http://www.gnu.org/licenses/gpl.html
+*/
+
+div.cwsRandomImage.left img {
+	margin-right: 1em;
+	float: left;
+}
+
+div.cwsRandomImage.right img {
+	margin-left: 1em;
+	float: right;
+}
