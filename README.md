@@ -1,64 +1,78 @@
-# Shortcode module for CMS Silverstripe (2.4.5)
+# Shortcode module for CMS SilverStripe (2.4.x)
+This module provides some handy shortcode methods ready to use from your [SilverStripe CMS](http://silverstripe.org) WYSIWYG editor.
 
-The latest version and code changes of the ***silverstripe-shortcode*** module can be found on [GitHub](https://github.com/cwsoft/silverstripe-shortcode).
+The `cwsoft-shortcode` module uses the shortcode mechanism introduced with SilverStripe 2.4. Shortcodes are ***placeholders*** entered into the WYSIWYG editor, which are replaced by output from PHP methods before beeing displayed on the screen. A handy feature, which allows to add dynamic content to a specific position within a WYSIWYG page.
 
-## About silverstripe-shortcode module
+***Shortcodes included in the cwsoft-shortcode module:***
+- [RandomImage]: displays a random image from your assets folder
+- [RandomQuote]: displays a random quote from a text file
+- [HideMailto]: obfuscates the mailto part of mailto links
 
-The Silverstripe shortcode mechanism allows to use ***placeholders*** in the WYSIWYG editor, which will be replaced by output from PHP methods before displayed on the screen. This is a handy Silverstripe feature, which allows to add dynamic content to a specify position within a WYSIWYG page.
+## Download
+The stable releases of the `cwsoft-shortcode` module for the SilverStripe CMS can be found in the [GitHub download area](https://github.com/cwsoft/silverstripe-shortcode/downloads). It is recommended to install/update to the latest available version listed. Older versions are provided for compatibility reasons with older SilverStripe versions and may contain bugs or security issues. The development history of the foldergallery module can be tracked via [GitHub](https://github.com/cwsoft/silverstripe-shortcode).
 
-The silverstripe-shortcode module uses the Silverstripe features and implements three easy to use shortcodes, which allows you to:
+## License
+The cwsoft-shortcode module is licensed under the [GNU General Public License (GPL) v3.0](http://www.gnu.org/licenses/gpl-3.0.html).
 
-- display a ***random image*** from /assets folder using a jQuery colorbox effect
-- display a ***random quote*** from a text file located in the /assets folder
-- to ***obfuscate E-Mails*** entered in WYSIWYG editor from spam bots
+## Requirements
+The minimum requirements to get the cwsoft-shortcode module running on your SilverStripe installation are as follows:
 
-## Prerequisites
-
-CMS Silverstripe version 2.4.5 (not tested for upcoming v3 release yet).
+- SilverStripe ***2.4.5*** or higher (recommended last stable 2.4.x version)
+- PHP ***5.2.2*** or higher (recommended last stable PHP 5.3.x version)
 
 ## Installation
+1. download the [cwsoft-shortcode v1.1.0](https://github.com/downloads/cwsoft/silverstripe-shortcode/cwsoft-shortcode-v1.1.0.zip) package
+2. extract the download package on your local computer
+3. upload the ***cwsoft-shortcode*** folder to your SilverStripe root folder using your preferred Ftp program
+4. update your SilverStripe database via `http://yourdomain.com/dev/build?flush=all`
 
-The installation follows the standard Silverstripe installation process:
-
-1. download archive of the latest version from the [GitHub repository](https://github.com/cwsoft/silverstripe-shortcode/downloads)
-2. extract the downloaded archive on your local computer
-3. ftp entire subfolder ****silverstripe-shortcode**** to your Silverstripe root folder
-4. rename the uploaded folder into ***cws-shortcode***
-5. build required database entries using Silverstripe build mechanism
-
-        yourdomain.com/dev/build?flush=all
-
-## Using the shortcode module
-
-Log into your Silverstripe backend and create a default page (WYSIWYG). Than you can use one of the following three shortcodes provided by this module.
+## Usage
+The shortcode methods are available in the WYSIWYG editor of your SilverStripe default page type. To use the shortcodes provided by the `cwsoft-shortcode` module, follow the steps below.
 
 ### Shortcode: `[RandomImage]`
-
 Enter the following shortcode into the WYSIWYG editor of a default page type to displays a random image with colorbox effect from a subfolder in ***/assets***.
 
         [RandomImage folder="subfolder_in_assets" align="left|right"]
 
-***Tip:*** The image alignment can be set to left or right. Styling of the output can be done via the template file *cws-shortcode/templates/Include/RandomImage.ss* and the CSS file located in *cws-shortcode/css/RandomImage.css*.
+**Tip:** The alignment of the image can be set to left or right. The appearance of the thumbnail can be adjusted to your needs via template file *cwsoft-shortcode/templates/Include/RandomImage.ss* and the CSS file located in *cwsoft-shortcode/css/RandomImage.css*.
 
 ### Shortcode: `[RandomQuote]`
-
 Enter the following shortcode into the WYSIWYG editor of a default page type to displays a random quote from a textfile located in a subfolder in ***/assets***.
 
         [RandomQuote csv_file="subfolder_in_assets/quotes.csv"]
 
-***Note:*** The textfile with the quotes must stick to the conventions below (including first line)
->"quote"|"author"
->"your first quote goes here"|"author name"
->"next quote goes here"|"autor of this quote"
+The textfile with the quotes must follow the conventions below (including first line):
 
+	"quote"|"author"
+	"your first quote goes here"|"author name"
+	"next quote goes here"|"autor of this quote"
+
+**Tip:** The appearance of the quote can be adjusted to your needs via template file *cwsoft-shortcode/templates/Include/RandomQuote.ss* and the CSS file located in *cwsoft-shortcode/css/RandomQuote.css*.
+	
 ### Shortcode: `[HideMailto]`
+Enter the following shortcode into the WYSIWYG editor of a default page type to obfuscate a mailto link from spam bots.
 
-Enter the following shortcode into the WYSIWYG editor of a default page type to obfuscate an E-Mail address from spam bots.
-
-        [HideMailto email='yourmail@domain.com' subject='optional_mail_subject']
+        [HideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[/HideMailto]
 
 Optional you can use the following form:
 
-        [HideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[HideMailto]
+        [HideMailto email='yourmail@domain.com' subject='optional_mail_subject']
 
 The characters @ and . of your E-Mail address will be replaced by (at) and (dot). The mailto link will be encrypted with a simple Javascript Caeser cipher and automatically decrypted into human readable format when openend in an E-Mail program.
+
+A screenshot with the frontend output of the three shortcode methods is shown below:
+![](https://github.com/cwsoft/silverstripe-shortcode/raw/master/.screenshots/cwsoft-shortcodes.png) 
+
+## Known Issues
+Known issues can be tracked and reported via GitHubs [issue tracking service](https://github.com/cwsoft/silverstripe-shortcode/issues). If you run into any issues with the cwsoft-shortcode module, visit the issue tracker and check if a similar issue was already reported. If not, just add a new topic descriping your issue.
+
+## Questions
+If you have questions or issues with cwsoft-shortcode, please visit the [SilverStripe](http://www.silverstripe.org/all-other-modules/show/19244) forum thread and ask for feedback.
+
+***Always provide the following information with your support request:***
+
+ - detailed error description (what happens, what have you already tried ...)
+ - the cwsoft-shortcode version used
+ - your PHP and SilverStripe version used
+ - information about your operating system (e.g. Windows, Mac, Linux) incl. version
+ - information of your browser and browser version used
