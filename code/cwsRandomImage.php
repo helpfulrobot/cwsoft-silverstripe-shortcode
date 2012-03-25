@@ -1,24 +1,31 @@
 <?php
 /**
- * Implements the shortcode [RandomImage], which allows to display a random image with
- * jQuery Colorbox effect from a defined subfolder inside assets
+ * Module: cwsoft-shortcode
+ * Provides some handy shortcode methods ready to use from your CMS SilverStripe WYSIWYG editor.
  *
- * USAGE INSIDE EDITOR:
- * 	[RandomImage folder="subfolder_in_assets" align="left|right"]
- * 
  * LICENSE: GNU General Public License 3.0
  * 
- * @platform    CMS Silverstripe 2.4.5
- * @package     silverstripe-shortcode
+ * @platform    CMS SilverStripe 2.4.x
+ * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
- * @version     1.0.0
+ * @version     1.1.0
  * @copyright   cwsoft
- * @license     http://www.gnu.org/licenses/gpl.html
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+
+/**
+ * Class: cwsRandomImage
+ * Implements shortcode [RandomImage] to display a random image from a subfolder in assets/.
+ * Automatic thumbnail creation implemented. A larger image scale appears on mouse click via jQuery Colorbox effect.
+ * 
+ * USAGE INSIDE WYSIWYG EDITOR:
+ * 	[RandomImage folder="subfolder_in_assets" align="left|right"]
 */
 class cwsRandomImage {
 	/**
 	 * Displays a random image with colorbox effect from a assets subfolder
-	 * Uses template "cws-shortcode/templates/Includes/RandomImage.ss" for output 
+	 * Uses template "csoft-shortcode/templates/Includes/RandomImage.ss" for output 
 	 * 
 	 * @param mixed $arguments (folder='subfolder_in_assets' align='left|right')
 	 * @param $content = null
@@ -30,7 +37,7 @@ class cwsRandomImage {
 		if (! isset($arguments['folder'])) return;
 		
 		// sanitize user inputs
-		$folder = Convert::raw2sql(basename($arguments['folder']));
+		$folder = Convert::raw2sql($arguments['folder']);
 		$align = isset($arguments['align']) ? strtolower(Convert::raw2xml($arguments['align'])) : '';
 		
 		// try to fetch a random image from defined folder

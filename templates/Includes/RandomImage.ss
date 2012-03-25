@@ -1,8 +1,8 @@
-<% require css(cws-shortcode/thirdparty/colorbox/colorbox.css) %>
-<% require javascript(cws-shortcode/thirdparty/jquery/jquery.min.js) %>
-<% require javascript(cws-shortcode/thirdparty/colorbox/jquery.colorbox-min.js) %>
-<% require javascript(cws-shortcode/javascript/RandomImage.js) %>
-<% require css(cws-shortcode/css/RandomImage.css) %>
+<% require css(cwsoft-shortcode/thirdparty/colorbox/colorbox.css) %>
+<% require css(cwsoft-shortcode/css/RandomImage.css) %>
+<% require javascript(cwsoft-shortcode/thirdparty/jquery/jquery.min.js) %>
+<% require javascript(cwsoft-shortcode/thirdparty/colorbox/jquery.colorbox-min.js) %>
+<% require javascript(cwsoft-shortcode/javascript/RandomImage.js) %>
 
 <% control RandomImage %>
 	</p>

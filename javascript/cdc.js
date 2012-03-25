@@ -1,14 +1,17 @@
 /**
+ * Module: cwsoft-shortcode
+ * Provides some handy shortcode methods ready to use from your CMS SilverStripe WYSIWYG editor.
+ *
  * This file includes the Javascript string manipulation function
- * 
+ *
  * LICENSE: GNU General Public License 3.0
  * 
- * @platform    CMS Silverstripe 2.4.5
- * @package     silverstripe-shortcode
+ * @platform    CMS SilverStripe 2.4.x
+ * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
- * @version     1.0.0
+ * @version     1.1.0
  * @copyright   cwsoft
- * @license     http://www.gnu.org/licenses/gpl.html
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 function cdc(a, b) {

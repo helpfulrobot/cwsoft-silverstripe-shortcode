@@ -1,24 +1,33 @@
 <?php
 /**
- * Implements the shortcode [HideMailto], which protects email parts in mailto links from beeing fechted by spam bots
+ * Module: cwsoft-shortcode
+ * Provides some handy shortcode methods ready to use from your CMS SilverStripe WYSIWYG editor.
  *
- * USAGE INSIDE EDITOR:
- *	[HideMailto email='yourmail@domain.com' subject='optional_mail_subject']
- *	[HideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[HideMailto]
- * 
  * LICENSE: GNU General Public License 3.0
  * 
- * @platform    CMS Silverstripe 2.4.5
- * @package     silverstripe-shortcode
+ * @platform    CMS SilverStripe 2.4.x
+ * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
- * @version     1.0.0
+ * @version     1.1.0
  * @copyright   cwsoft
- * @license     http://www.gnu.org/licenses/gpl.html
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+
+/**
+ * Class: cwsHideMailTo
+ * Implements shortcode [HideMailto] to obfuscate email adresses from beeing fetched by spam bots.
+ * To obfuscate the email address, @ is replaced by (at) and . by (dot).
+ * Mailto links are encrypted with a simple Caeser chiffre and decrypted via JavaScript on mouse click.
+ * 
+ * USAGE INSIDE WYSIWYG EDITOR:
+ *	[HideMailto email='yourmail@domain.com' subject='optional_mail_subject']
+ *	[HideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[HideMailto]
 */
 class cwsHideMailto {
 	/**
-	 * Hide mailto links from beeing fetched by spam bots
-	 * Uses template "cws-shortcode/templates/Includes/HideMailto.ss" for output 
+	 * Implements the mailto handler to protect email addresses defined via [HideMailto email='xxx']
+	 * Uses template "cwsoft-shortcode/templates/Includes/HideMailto.ss" for output
 	 * 
 	 * @param mixed $arguments (email='yourmail@domain.com' subject='mail subject')
 	 * @param $content = null
@@ -53,10 +62,10 @@ class cwsHideMailto {
 	}
 
 	/**
-	 * Simple Caesar chiffre to obfuscate mailto emails
+	 * Simple Caesar chiffre to encrypt/decrypt a text string
 	 * 
-	 * @param string $text
-	 * @param integer $key
+	 * @param string $text: text to encrypt/decrypt
+	 * @param integer $shift: number of characters to shift
 	 * @return encrypted/decrypted string
 	 */
 	private static function caesar_cipher($text, $shift) {

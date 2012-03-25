@@ -1,4 +1,4 @@
-﻿<% require css(cws-shortcode/css/RandomQuote.css) %>
+﻿<% require css(cwsoft-shortcode/css/RandomQuote.css) %>
 
 <% control RandomQuote %>
 </p>

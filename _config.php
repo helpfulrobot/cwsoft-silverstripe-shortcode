@@ -1,21 +1,24 @@
 <?php
 /**
- * This file registers the implemented shortcodes and configures the default behaviour
- * 
+ * Module: cwsoft-shortcode
+ * Provides some handy shortcode methods ready to use from your CMS SilverStripe WYSIWYG editor.
+ *
+ * This file contains global settings for the SilverStripe CMS shortcode module.
+ *
  * LICENSE: GNU General Public License 3.0
  * 
- * @platform    CMS Silverstripe 2.4.5
- * @package     silverstripe-shortcode
+ * @platform    CMS SilverStripe 2.4.x
+ * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
- * @version     1.0.0
+ * @version     1.1.0
  * @copyright   cwsoft
- * @license     http://www.gnu.org/licenses/gpl.html
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html
 */
 
-// ensure shortcode module is located in folder named cws-shortcode
+// ensure shortcode module is located in folder named cwsoft-shortcode
 $moduleDir = basename(rtrim(dirname(__FILE__), '/'));
-if ($moduleDir != 'cws-shortcode') {
-	user_error(sprintf(_t('Messages.WRONGDIRECTORY','The shortcode module must be located in a directory named "cws-shortcode" (currently "%s")'), $moduleDir), E_USER_ERROR);
+if ($moduleDir != 'cwsoft-shortcode') {
+	user_error(sprintf(_t('Messages.WRONGDIRECTORY','The shortcode module must be located in a directory named "cwsoft-shortcode" (currently "%s")'), $moduleDir), E_USER_ERROR);
 }
 
 // include external files into head section
