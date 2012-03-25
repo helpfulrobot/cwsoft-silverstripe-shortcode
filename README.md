@@ -4,9 +4,10 @@ This module provides some handy shortcode methods ready to use from your [Silver
 The `cwsoft-shortcode` module uses the shortcode mechanism introduced with SilverStripe 2.4. Shortcodes are ***placeholders*** entered into the WYSIWYG editor, which are replaced by output from PHP methods before beeing displayed on the screen. A handy feature, which allows to add dynamic content to a specific position within a WYSIWYG page.
 
 ***Shortcodes included in the cwsoft-shortcode module:***
-- [RandomImage]: displays a random image from your assets folder
-- [RandomQuote]: displays a random quote from a text file
-- [HideMailto]: obfuscates the mailto part of mailto links
+
+- **[HideMailto]**: obfuscates the mailto part of mailto links
+- **[RandomQuote]**: displays a random quote from a text file
+- **[RandomImage]**: displays a random image from your assets folder
 
 ## Download
 The stable releases of the `cwsoft-shortcode` module for the SilverStripe CMS can be found in the [GitHub download area](https://github.com/cwsoft/silverstripe-shortcode/downloads). It is recommended to install/update to the latest available version listed. Older versions are provided for compatibility reasons with older SilverStripe versions and may contain bugs or security issues. The development history of the foldergallery module can be tracked via [GitHub](https://github.com/cwsoft/silverstripe-shortcode).
@@ -29,14 +30,18 @@ The minimum requirements to get the cwsoft-shortcode module running on your Silv
 ## Usage
 The shortcode methods are available in the WYSIWYG editor of your SilverStripe default page type. To use the shortcodes provided by the `cwsoft-shortcode` module, follow the steps below.
 
-### Shortcode: `[RandomImage]`
-Enter the following shortcode into the WYSIWYG editor of a default page type to displays a random image with colorbox effect from a subfolder in ***/assets***.
+### Shortcode: [HideMailto]
+Enter the following shortcode into the WYSIWYG editor of a default page type to obfuscate a mailto link from spam bots.
 
-        [RandomImage folder="subfolder_in_assets" align="left|right"]
+        [HideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[/HideMailto]
 
-**Tip:** The alignment of the image can be set to left or right. The appearance of the thumbnail can be adjusted to your needs via template file *cwsoft-shortcode/templates/Include/RandomImage.ss* and the CSS file located in *cwsoft-shortcode/css/RandomImage.css*.
+Optional you can use the following form:
 
-### Shortcode: `[RandomQuote]`
+        [HideMailto email='yourmail@domain.com' subject='optional_mail_subject']
+
+The characters @ and . of your E-Mail address will be replaced by (at) and (dot). The mailto link will be encrypted with a simple Javascript Caeser cipher and automatically decrypted into human readable format when openend in an E-Mail program.
+
+### Shortcode: [RandomQuote]
 Enter the following shortcode into the WYSIWYG editor of a default page type to displays a random quote from a textfile located in a subfolder in ***/assets***.
 
         [RandomQuote csv_file="subfolder_in_assets/quotes.csv"]
@@ -48,17 +53,13 @@ The textfile with the quotes must follow the conventions below (including first 
 	"next quote goes here"|"autor of this quote"
 
 **Tip:** The appearance of the quote can be adjusted to your needs via template file *cwsoft-shortcode/templates/Include/RandomQuote.ss* and the CSS file located in *cwsoft-shortcode/css/RandomQuote.css*.
-	
-### Shortcode: `[HideMailto]`
-Enter the following shortcode into the WYSIWYG editor of a default page type to obfuscate a mailto link from spam bots.
 
-        [HideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[/HideMailto]
+### Shortcode: [RandomImage]
+Enter the following shortcode into the WYSIWYG editor of a default page type to displays a random image with colorbox effect from a subfolder in ***/assets***.
 
-Optional you can use the following form:
+        [RandomImage folder="subfolder_in_assets" align="left|right"]
 
-        [HideMailto email='yourmail@domain.com' subject='optional_mail_subject']
-
-The characters @ and . of your E-Mail address will be replaced by (at) and (dot). The mailto link will be encrypted with a simple Javascript Caeser cipher and automatically decrypted into human readable format when openend in an E-Mail program.
+**Tip:** The alignment of the image can be set to left or right. The appearance of the thumbnail can be adjusted to your needs via template file *cwsoft-shortcode/templates/Include/RandomImage.ss* and the CSS file located in *cwsoft-shortcode/css/RandomImage.css*.
 
 A screenshot with the frontend output of the three shortcode methods is shown below:
 ![](https://github.com/cwsoft/silverstripe-shortcode/raw/master/.screenshots/cwsoft-shortcodes.png) 
