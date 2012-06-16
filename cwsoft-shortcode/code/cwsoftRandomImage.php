@@ -8,21 +8,20 @@
  * @platform    CMS SilverStripe 2.4.x
  * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
- * @version     1.1.0
  * @copyright   cwsoft
  * @license     http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 
 /**
- * Class: cwsRandomImage
+ * Class: cwsoftRandomImage
  * Implements shortcode [RandomImage] to display a random image from a subfolder in assets/.
  * Automatic thumbnail creation implemented. A larger image scale appears on mouse click via jQuery Colorbox effect.
  * 
  * USAGE INSIDE WYSIWYG EDITOR:
  * 	[RandomImage folder="subfolder_in_assets" align="left|right"]
 */
-class cwsRandomImage {
+class cwsoftRandomImage {
 	/**
 	 * Displays a random image with colorbox effect from a assets subfolder
 	 * Uses template "csoft-shortcode/templates/Includes/RandomImage.ss" for output 

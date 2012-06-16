@@ -2,7 +2,7 @@
 
 <% control RandomQuote %>
 </p>
-<div class="cwsRandomQuote">
+<div class="cwsoftRandomQuote">
 	<h2><% _t('QUOTEHEADING','Some thoughts on your way') %></h2>
 	<strong>„$Top.quote“</strong>
 	<br />

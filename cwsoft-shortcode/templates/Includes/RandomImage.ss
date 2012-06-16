@@ -6,7 +6,7 @@
 
 <% control RandomImage %>
 	</p>
-	<div class="cwsRandomImage $Top.align">
+	<div class="cwsoftRandomImage $Top.align">
 		<a href="$URL" title="$Top.caption" rel="colorbox">
 			<% if Orientation == 2 %>
 				$SetRatioSize(240,180)

@@ -8,14 +8,13 @@
  * @platform    CMS SilverStripe 2.4.x
  * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
- * @version     1.1.0
  * @copyright   cwsoft
  * @license     http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 
 /**
- * Class: cwsHideMailTo
+ * Class: cwsoftHideMailTo
  * Implements shortcode [HideMailto] to obfuscate email adresses from beeing fetched by spam bots.
  * To obfuscate the email address, @ is replaced by (at) and . by (dot).
  * Mailto links are encrypted with a simple Caeser chiffre and decrypted via JavaScript on mouse click.
@@ -24,7 +23,7 @@
  *	[HideMailto email='yourmail@domain.com' subject='optional_mail_subject']
  *	[HideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[HideMailto]
 */
-class cwsHideMailto {
+class cwsoftHideMailto {
 	/**
 	 * Implements the mailto handler to protect email addresses defined via [HideMailto email='xxx']
 	 * Uses template "cwsoft-shortcode/templates/Includes/HideMailto.ss" for output
@@ -45,7 +44,7 @@ class cwsHideMailto {
 
 		// get optional mail subject and mail link description
 		$subject = isset($arguments['subject']) ? Convert::raw2xml(trim($arguments['subject'])) : '';
-		if ($subject == '') $subject = _t('cwsHideMailto.SUBJECT','Subject');
+		if ($subject == '') $subject = _t('cwsoftHideMailto.SUBJECT','Subject');
 		
 		// create random key for caesar cipher
 		$key = mt_rand(1, 30);

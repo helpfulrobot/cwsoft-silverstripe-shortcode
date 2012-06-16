@@ -8,20 +8,19 @@
  * @platform    CMS SilverStripe 2.4.x
  * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
- * @version     1.1.0
  * @copyright   cwsoft
  * @license     http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 
 /**
- * Class: cwsRandomQuote
+ * Class: cwsoftRandomQuote
  * Implements shortcode [RandomQuote] to display a random citation from a CSV file stored inside assets folder.
  *
  * USAGE INSIDE WYSIWYG EDITOR:
  * 	[RandomQuote csv_file="subfolder_in_assets/quotes.csv"]
 */
-class cwsRandomQuote {
+class cwsoftRandomQuote {
 	/**
 	 * Displays random quote from a CSV file located in a assets subfolder
 	 * Uses template "cwsoft-shortcode/templates/Includes/RandomQuote.ss" for output 
@@ -57,8 +56,8 @@ class cwsRandomQuote {
 
         // use default citation if CSV file is invalid
 		if (! (isset($citation['quote']) && isset($citation['author'])) ) {
-			$citation['quote'] = _t('cwsShortCodePage.DEFAULTQUOTE','Only who puts his heart and soul in it, can ignite the fire in others.');
-			$citation['author'] = _t('cwsShortCodePage.DEFAULTAUTHOR','Augustinus');
+			$citation['quote'] = _t('cwsoftShortCodePage.DEFAULTQUOTE','Only who puts his heart and soul in it, can ignite the fire in others.');
+			$citation['author'] = _t('cwsoftShortCodePage.DEFAULTAUTHOR','Augustinus');
         }
 		
 		// load template and process data

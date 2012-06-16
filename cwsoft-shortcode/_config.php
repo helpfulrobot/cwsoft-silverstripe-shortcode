@@ -10,12 +10,12 @@
  * @platform    CMS SilverStripe 2.4.x
  * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
- * @version     1.1.0
  * @copyright   cwsoft
  * @license     http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 // ensure shortcode module is located in folder named cwsoft-shortcode
+define('CWSOFT_SHORTCODE_VERSION', '1.2.0');
 $moduleDir = basename(rtrim(dirname(__FILE__), '/'));
 if ($moduleDir != 'cwsoft-shortcode') {
 	user_error(sprintf(_t('Messages.WRONGDIRECTORY','The shortcode module must be located in a directory named "cwsoft-shortcode" (currently "%s")'), $moduleDir), E_USER_ERROR);
@@ -25,9 +25,9 @@ if ($moduleDir != 'cwsoft-shortcode') {
 Requirements::set_write_js_to_body(false);
 
 // register short code tags accessible from pages of type cwsCodePage
-ShortcodeParser::get()->register('RandomImage', array('cwsRandomImage', 'RandomImageHandler'));
-ShortcodeParser::get()->register('RandomQuote', array('cwsRandomQuote', 'RandomQuoteHandler'));
-ShortcodeParser::get()->register('HideMailto', array('cwsHideMailto', 'HideMailtoHandler'));
+ShortcodeParser::get()->register('RandomImage', array('cwsoftRandomImage', 'RandomImageHandler'));
+ShortcodeParser::get()->register('RandomQuote', array('cwsoftRandomQuote', 'RandomQuoteHandler'));
+ShortcodeParser::get()->register('HideMailto', array('cwsoftHideMailto', 'HideMailtoHandler'));
 
 // increase default image quality of thumbnails
 GD::set_default_quality(95);

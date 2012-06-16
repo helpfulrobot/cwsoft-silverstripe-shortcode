@@ -22,9 +22,9 @@ The minimum requirements to get the cwsoft-shortcode module running on your Silv
 - PHP ***5.2.2*** or higher (recommended last stable PHP 5.3.x version)
 
 ## Installation
-1. download the [cwsoft-shortcode v1.1.0](https://github.com/downloads/cwsoft/silverstripe-shortcode/cwsoft-shortcode-v1.1.0.zip) package
-2. extract the download package on your local computer
-3. upload the ***cwsoft-shortcode*** folder to your SilverStripe root folder using your preferred Ftp program
+1. download latest archive from GitHub [download area](https://github.com/cwsoft/silverstripe-shortcode/downloads)
+2. unpack the archive on your local computer
+3. upload the entire ***cwsoft-shortcode*** folder to your SilverStripe root folder using your preferred Ftp program
 4. update your SilverStripe database via `http://yourdomain.com/dev/build?flush=all`
 
 ## Usage
