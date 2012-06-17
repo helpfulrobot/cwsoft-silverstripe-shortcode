@@ -3,11 +3,12 @@ This module provides some handy shortcode methods ready to use from your [Silver
 
 The `cwsoft-shortcode` module uses the shortcode mechanism introduced with SilverStripe 2.4. Shortcodes are ***placeholders*** entered into the WYSIWYG editor, which are replaced by output from PHP methods before beeing displayed on the screen. A handy feature, which allows to add dynamic content to a specific position within a WYSIWYG page.
 
-***Shortcodes included in the cwsoft-shortcode module:***
+----------------------------------------
+***Shortcode overview:***
 
-- **[HideMailto]**: obfuscates the mailto part of mailto links
-- **[RandomQuote]**: displays a random quote from a text file
-- **[RandomImage]**: displays a random image from your assets folder
+- [HideMailto](https://github.com/cwsoft/silverstripe-shortcode#shortcode-hidemailto): obfuscates the mailto part of mailto links
+- [RandomQuote](https://github.com/cwsoft/silverstripe-shortcode#shortcode-randomquote): displays a random quote from a text file
+- [RandomImage](https://github.com/cwsoft/silverstripe-shortcode#shortcode-randomimage): displays a random image from your assets folder
 
 ## Download
 The latest stable release of the `cwsoft-shortcode` module is available as ZIP or TAR archive in GitHubs [download area](https://github.com/cwsoft/silverstripe-shortcode/downloads). [Previous releases](https://github.com/cwsoft/silverstripe-shortcode/tags) are still available for download, but are no longer maintained. The development history of the shortcode module can be tracked via [GitHub](https://github.com/cwsoft/silverstripe-shortcode/commits/master).
