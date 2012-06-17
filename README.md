@@ -10,7 +10,7 @@ The `cwsoft-shortcode` module uses the shortcode mechanism introduced with Silve
 - **[RandomImage]**: displays a random image from your assets folder
 
 ## Download
-The stable releases of the `cwsoft-shortcode` module for the SilverStripe CMS can be found in the [GitHub download area](https://github.com/cwsoft/silverstripe-shortcode/downloads). It is recommended to install/update to the latest available version listed. Older versions are provided for compatibility reasons with older SilverStripe versions and may contain bugs or security issues. The development history of the foldergallery module can be tracked via [GitHub](https://github.com/cwsoft/silverstripe-shortcode).
+The latest stable release of the `cwsoft-shortcode` module is available as ZIP or TAR archive in GitHubs [download area](https://github.com/cwsoft/silverstripe-shortcode/downloads). [Previous releases](https://github.com/cwsoft/silverstripe-shortcode/tags) are still available for download, but are no longer maintained. The development history of the shortcode module can be tracked via [GitHub](https://github.com/cwsoft/silverstripe-shortcode/commits/master).
 
 ## License
 The cwsoft-shortcode module is licensed under the [GNU General Public License (GPL) v3.0](http://www.gnu.org/licenses/gpl-3.0.html).
