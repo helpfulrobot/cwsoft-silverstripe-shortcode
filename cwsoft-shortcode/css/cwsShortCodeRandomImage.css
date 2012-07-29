@@ -2,18 +2,18 @@
  * Module: cwsoft-shortcode
  * Provides some handy shortcode methods ready to use from your CMS SilverStripe WYSIWYG editor.
  *
- * This file contains the CSS definitions for the shortcode: [RandomImage]
+ * This file contains the CSS definitions for the shortcode: [cwsRandomImage]
  *
  * LICENSE: GNU General Public License 3.0
  * 
- * @platform    CMS SilverStripe 2.4.x
+ * @platform    CMS SilverStripe 3
  * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
  * @copyright   cwsoft
  * @license     http://www.gnu.org/licenses/gpl-3.0.html
 */
 
-div.cwsoftRandomImage.left img {
+div.cwsShortCodeRandomImage.left img {
 	margin-right: 1em;
 	float: left;
 	background-color: #fff;
@@ -21,7 +21,7 @@ div.cwsoftRandomImage.left img {
 	border: 1px solid #ccc;
 }
 
-div.cwsoftRandomImage.right img {
+div.cwsShortCodeRandomImage.right img {
 	margin-left: 1em;
 	float: right;
 	background-color: #fff;

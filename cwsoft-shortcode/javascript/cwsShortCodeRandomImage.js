@@ -6,7 +6,7 @@
  *
  * LICENSE: GNU General Public License 3.0
  * 
- * @platform    CMS SilverStripe 2.4.x
+ * @platform    CMS SilverStripe 3
  * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
  * @copyright   cwsoft

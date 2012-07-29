@@ -5,7 +5,7 @@
  *
  * LICENSE: GNU General Public License 3.0
  * 
- * @platform    CMS SilverStripe 2.4.x
+ * @platform    CMS SilverStripe 3
  * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
  * @copyright   cwsoft
@@ -14,23 +14,23 @@
 
 
 /**
- * Class: cwsoftRandomQuote
- * Implements shortcode [RandomQuote] to display a random citation from a CSV file stored inside assets folder.
+ * Class: cwsShortCodeRandomQuote
+ * Implements shortcode [cwsRandomQuote] to display a random citation from a CSV file stored inside assets folder.
  *
  * USAGE INSIDE WYSIWYG EDITOR:
- * 	[RandomQuote csv_file="subfolder_in_assets/quotes.csv"]
+ * 	[cwsRandomQuote csv_file="subfolder_in_assets/quotes.csv"]
 */
-class cwsoftRandomQuote {
+class cwsShortCodeRandomQuote {
 	/**
 	 * Displays random quote from a CSV file located in a assets subfolder
-	 * Uses template "cwsoft-shortcode/templates/Includes/RandomQuote.ss" for output 
+	 * Uses template "cwsoft-shortcode/templates/Includes/cwsShortCodeRandomQuote.ss" for output 
 	 * 
 	 * @param $arguments (csv_file = 'subfolder_in_assets/csv_file.csv')
 	 * @param $content = null
 	 * @param $parser = null
 	 * @return processed template RandomQuote.ss
 	 */
-	public function RandomQuoteHandler($arguments, $content = null, $parser = null) {
+	public static function cwsShortCodeRandomQuoteHandler($arguments, $content = null, $parser = null) {
 		// only proceed if a CSV file was specified 
 		if (! isset($arguments['csv_file'])) return;
 		
@@ -50,18 +50,18 @@ class cwsoftRandomQuote {
 
         	// randomize citation array, pick first element for display
         	shuffle($citations);
-			$citation = $citations[0];
+			$cwsRandomQuote = $citations[0];
 			unset($citations);
 		}
 
         // use default citation if CSV file is invalid
-		if (! (isset($citation['quote']) && isset($citation['author'])) ) {
-			$citation['quote'] = _t('cwsoftShortCodePage.DEFAULTQUOTE','Only who puts his heart and soul in it, can ignite the fire in others.');
-			$citation['author'] = _t('cwsoftShortCodePage.DEFAULTAUTHOR','Augustinus');
+		if (! (isset($cwsRandomQuote['quote']) && isset($cwsRandomQuote['author'])) ) {
+			$cwsRandomQuote['quote'] = _t('cwsShortCodeRandomQuote.DEFAULTQUOTE','Only who puts his heart and soul in it, can ignite the fire in others.');
+			$cwsRandomQuote['author'] = _t('cwsShortCodeRandomQuote.DEFAULTAUTHOR','Augustinus');
         }
 		
 		// load template and process data
-		$template = new SSViewer('RandomQuote');
-		return $template->process(new ArrayData($citation));	
+		$template = new SSViewer('cwsShortCodeRandomQuote');
+		return $template->process(new ArrayData($cwsRandomQuote));	
 	}
 }

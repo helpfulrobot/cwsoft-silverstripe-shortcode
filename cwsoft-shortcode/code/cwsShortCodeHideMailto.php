@@ -5,7 +5,7 @@
  *
  * LICENSE: GNU General Public License 3.0
  * 
- * @platform    CMS SilverStripe 2.4.x
+ * @platform    CMS SilverStripe 3
  * @package     cwsoft-shortcode
  * @author      cwsoft (http://cwsoft.de)
  * @copyright   cwsoft
@@ -14,26 +14,26 @@
 
 
 /**
- * Class: cwsoftHideMailTo
- * Implements shortcode [HideMailto] to obfuscate email adresses from beeing fetched by spam bots.
+ * Class: cwsShortCodeHideMailTo
+ * Implements shortcode [cwsHideMailto] to obfuscate email adresses from beeing fetched by spam bots.
  * To obfuscate the email address, @ is replaced by (at) and . by (dot).
  * Mailto links are encrypted with a simple Caeser chiffre and decrypted via JavaScript on mouse click.
  * 
  * USAGE INSIDE WYSIWYG EDITOR:
- *	[HideMailto email='yourmail@domain.com' subject='optional_mail_subject']
- *	[HideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[HideMailto]
+ *	[cwsHideMailto email='yourmail@domain.com' subject='optional_mail_subject']
+ *	[cwsHideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[/cwsHideMailto]
 */
-class cwsoftHideMailto {
+class cwsShortCodeHideMailto {
 	/**
-	 * Implements the mailto handler to protect email addresses defined via [HideMailto email='xxx']
-	 * Uses template "cwsoft-shortcode/templates/Includes/HideMailto.ss" for output
+	 * Implements the mailto handler to protect email addresses defined via [cwsHideMailto email='xxx']
+	 * Uses template "cwsoft-shortcode/templates/Includes/cwsShortCodeHideMailto.ss" for output
 	 * 
 	 * @param mixed $arguments (email='yourmail@domain.com' subject='mail subject')
 	 * @param $content = null
 	 * @param $parser = null
-	 * @return processed template HideMailto.ss
+	 * @return processed template cwsShortCodeHideMailto.ss
 	 */
-	public function HideMailtoHandler($arguments, $content = null, $parser = null) {
+	public static function cwsShortCodeHideMailtoHandler($arguments, $content = null, $parser = null) {
 		// only proceed if a valid email was defined
 		$email = isset($arguments['email']) ? Convert::raw2xml(trim($arguments['email'])) : '';
 		if ($email == '') return;
@@ -44,9 +44,9 @@ class cwsoftHideMailto {
 
 		// get optional mail subject and mail link description
 		$subject = isset($arguments['subject']) ? Convert::raw2xml(trim($arguments['subject'])) : '';
-		if ($subject == '') $subject = _t('cwsoftHideMailto.SUBJECT','Subject');
+		if ($subject == '') $subject = _t('cwsShortCodeHideMailto.SUBJECT','Subject');
 		
-		// create random key for caesar cipher
+		// create a random key for the caesar cipher
 		$key = mt_rand(1, 30);
 
 		// collect output data
@@ -56,7 +56,7 @@ class cwsoftHideMailto {
 		$data['description'] = $description;
 		
 		// load template and process data
-		$template = new SSViewer('HideMailto');
+		$template = new SSViewer('cwsShortCodeHideMailto');
 		return $template->process(new ArrayData($data));
 	}
 
