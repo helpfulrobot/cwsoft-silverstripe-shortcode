@@ -6,9 +6,9 @@ The `cwsoft-shortcode` module builds up on the shortcode function first introduc
 ----------------------------------------
 ***Shortcode methods provided:***
 
-- [cwsHideMailto](https://github.com/cwsoft/silverstripe-shortcode#shortcode-hidemailto): obfuscates the mailto part of mailto links
-- [cwsRandomQuote](https://github.com/cwsoft/silverstripe-shortcode#shortcode-randomquote): displays a random quote from a text file
-- [cwsRandomImage](https://github.com/cwsoft/silverstripe-shortcode#shortcode-randomimage): displays a random image from your assets folder
+- [cwsHideMailto](https://github.com/cwsoft/silverstripe-shortcode#shortcode-cwshidemailto): obfuscates the mailto part of mailto links
+- [cwsRandomQuote](https://github.com/cwsoft/silverstripe-shortcode#shortcode-cwsrandomquote): displays a random quote from a text file
+- [cwsRandomImage](https://github.com/cwsoft/silverstripe-shortcode#shortcode-cwsrandomimage): displays a random image from your assets folder
 
 ## Download
 The latest stable release of the `cwsoft-shortcode` module is available as ZIP or TAR archive in GitHubs [download area](https://github.com/cwsoft/silverstripe-shortcode/downloads). [Previous releases](https://github.com/cwsoft/silverstripe-shortcode/tags) are still available for download, but are no longer maintained. The development history of the shortcode module can be tracked via [GitHub](https://github.com/cwsoft/silverstripe-shortcode/commits/master).
@@ -60,7 +60,7 @@ The textfile with the quotes must follow the conventions below (including first 
 ### Shortcode: [cwsRandomImage]
 Enter the following shortcode into the WYSIWYG editor of a default page type to displays a random image with colorbox effect from a subfolder in ***/assets***.
 
-        [RandomImage folder="subfolder_in_assets" align="left|right"]
+        [cwsRandomImage folder="subfolder_in_assets" align="left|right"]
 
 **Tip:** The alignment of the image can be set to left or right. The appearance of the thumbnail can be adjusted to your needs via template file *cwsoft-shortcode/templates/Include/cwsShortCodeRandomImage.ss* and the CSS file located in *cwsoft-shortcode/css/cwsShortCodeRandomImage.css*.
 
