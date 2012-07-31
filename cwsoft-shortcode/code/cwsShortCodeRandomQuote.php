@@ -53,12 +53,12 @@ class cwsShortCodeRandomQuote {
 			$cwsRandomQuote = $citations[0];
 			unset($citations);
 		}
-
-        // use default citation if CSV file is invalid
+		
+		// use default citation if CSV file is invalid
 		if (! (isset($cwsRandomQuote['quote']) && isset($cwsRandomQuote['author'])) ) {
 			$cwsRandomQuote['quote'] = _t('cwsShortCodeRandomQuote.DEFAULTQUOTE','Only who puts his heart and soul in it, can ignite the fire in others.');
 			$cwsRandomQuote['author'] = _t('cwsShortCodeRandomQuote.DEFAULTAUTHOR','Augustinus');
-        }
+		}
 		
 		// load template and process data
 		$template = new SSViewer('cwsShortCodeRandomQuote');

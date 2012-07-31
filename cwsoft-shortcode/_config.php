@@ -26,8 +26,8 @@ if ($folderName != $moduleName) {
 			'Please rename the folder "{folderName}" into "{moduleName}" to get the {moduleName} module working properly.',
 			array('moduleName' => $moduleName, 'folderName' => $folderName)
 		),
-        E_USER_ERROR
-    );
+		E_USER_ERROR
+	);
 }
 
 // include external files into head section
