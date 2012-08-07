@@ -6,8 +6,8 @@ de:
     SUBJECT: 'Betreff'
 
   cwsShortCodeRandomQuote:
-    DEFAULTQUOTE: 'Nur wer selbst brennt, kann Feuer in anderen entfachen.'
-    DEFAULTAUTHOR: 'Augustinus'
+    DEFAULT_QUOTE: 'Nur wer selbst brennt, kann Feuer in anderen entfachen.'
+    DEFAULT_AUTHOR: 'Augustinus'
 
-  cwsShortCodeRandomQuote.ss:
-    QUOTEHEADING: 'Worte mit auf den Weg gegeben'
+  RandomQuote:
+    QUOTE_HEADING: 'Worte mit auf den Weg gegeben'

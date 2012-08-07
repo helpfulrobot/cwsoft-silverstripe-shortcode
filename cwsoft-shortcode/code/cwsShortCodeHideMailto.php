@@ -20,18 +20,18 @@
  * Mailto links are encrypted with a simple Caeser chiffre and decrypted via JavaScript on mouse click.
  * 
  * USAGE INSIDE WYSIWYG EDITOR:
- *	[cwsHideMailto email='yourmail@domain.com' subject='optional_mail_subject']
  *	[cwsHideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[/cwsHideMailto]
+ *	[cwsHideMailto email='yourmail@domain.com' subject='optional_mail_subject']
 */
 class cwsShortCodeHideMailto {
 	/**
 	 * Implements the mailto handler to protect email addresses defined via [cwsHideMailto email='xxx']
-	 * Uses template "cwsoft-shortcode/templates/Includes/cwsShortCodeHideMailto.ss" for output
+	 * Uses template "cwsoft-shortcode/templates/Includes/HideMailto.ss" for output
 	 * 
 	 * @param mixed $arguments (email='yourmail@domain.com' subject='mail subject')
 	 * @param $content = null
 	 * @param $parser = null
-	 * @return processed template cwsShortCodeHideMailto.ss
+	 * @return processed template HideMailto.ss
 	 */
 	public static function cwsShortCodeHideMailtoHandler($arguments, $content = null, $parser = null) {
 		// only proceed if a valid email was defined
@@ -49,14 +49,15 @@ class cwsShortCodeHideMailto {
 		// create a random key for the caesar cipher
 		$key = mt_rand(1, 30);
 
-		// collect output data
-		$data = array();
-		$data['email'] = (self::caesar_cipher('mailto:' . $email, $key));
-		$data['subject'] = rawurldecode($subject . chr(64 + $key));
-		$data['description'] = $description;
+		// prepare data for output
+		$data = array(
+			'CryptedMailto' => self::caesar_cipher('mailto:' . $email, $key),
+			'Subject' => rawurldecode($subject . chr(64 + $key)),
+			'LinkText' => $description
+		);
 		
 		// load template and process data
-		$template = new SSViewer('cwsShortCodeHideMailto');
+		$template = new SSViewer('HideMailto');
 		return $template->process(new ArrayData($data));
 	}
 

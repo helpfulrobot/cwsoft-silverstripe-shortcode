@@ -49,20 +49,20 @@ Enter the following shortcode into the WYSIWYG editor of a default page type to 
 
         [cwsRandomQuote csv_file="subfolder_in_assets/quotes.csv"]
 
-The textfile with the quotes must follow the conventions below (including first line):
+The textfile with the quotes must follow the conventions below (***ensure*** thaat the first line of your CSV file exactly matches the example below):
 
-	"quote"|"author"
+	"Quote"|"Author"
 	"your first quote goes here"|"author name"
 	"next quote goes here"|"autor of this quote"
 
-**Tip:** The appearance of the quote can be adjusted to your needs via template file *cwsoft-shortcode/templates/Include/cwsShortCodeRandomQuote.ss* and the CSS file located in *cwsoft-shortcode/css/cwsShortCodeRandomQuote.css*.
+**Tip:** The appearance of the quote can be adjusted to your needs via template file *cwsoft-shortcode/templates/Include/RandomQuote.ss* and the CSS file located in *cwsoft-shortcode/css/cwsShortCodeRandomQuote.css*.
 
 ### Shortcode: [cwsRandomImage]
 Enter the following shortcode into the WYSIWYG editor of a default page type to displays a random image with colorbox effect from a subfolder in ***/assets***.
 
         [cwsRandomImage folder="subfolder_in_assets" align="left|right"]
 
-**Tip:** The alignment of the image can be set to left or right. The appearance of the thumbnail can be adjusted to your needs via template file *cwsoft-shortcode/templates/Include/cwsShortCodeRandomImage.ss* and the CSS file located in *cwsoft-shortcode/css/cwsShortCodeRandomImage.css*.
+**Tip:** The alignment of the image can be set to left or right. The appearance of the thumbnail can be adjusted to your needs via template file *cwsoft-shortcode/templates/Include/RandomImage.ss* and the CSS file located in *cwsoft-shortcode/css/cwsShortCodeRandomImage.css*.
 
 A screenshot with the frontend output of the three shortcode methods is shown below:
 ![](https://github.com/cwsoft/silverstripe-shortcode/raw/master/.screenshots/cwsoft-shortcode.png) 

@@ -6,8 +6,8 @@ en:
     SUBJECT: 'Subject'
 
   cwsShortCodeRandomQuote:
-    DEFAULTQUOTE: 'Only who puts his heart and soul in it, can ignite the fire in others.'
-    DEFAULTAUTHOR: 'Augustinus'
+    DEFAULT_QUOTE: 'Only who puts his heart and soul in it, can ignite the fire in others.'
+    DEFAULT_AUTHOR: 'Augustinus'
 
-  cwsShortCodeRandomQuote.ss:
-    QUOTEHEADING: 'Some thoughts on your way'
+  RandomQuote:
+    QUOTE_HEADING: 'Some thoughts on your way'
