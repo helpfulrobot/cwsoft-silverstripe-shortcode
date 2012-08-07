@@ -20,8 +20,8 @@ $moduleName = 'cwsoft-shortcode';
 $folderName = basename(dirname(__FILE__));
 
 if ($folderName != $moduleName) {
-    user_error(
-        _t(
+	user_error(
+		_t(
 			'_config.WRONG_MODULE_FOLDER', 
 			'Please rename the folder "{folderName}" into "{moduleName}" to get the {moduleName} module working properly.',
 			array('moduleName' => $moduleName, 'folderName' => $folderName)
