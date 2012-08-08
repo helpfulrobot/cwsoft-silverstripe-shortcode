@@ -33,22 +33,22 @@ class cwsShortCodeRandomQuote {
 	public static function cwsShortCodeRandomQuoteHandler($arguments, $content = null, $parser = null) {
 		// only proceed if a CSV file was specified 
 		if (! isset($arguments['csv_file'])) return;
+		$data = array();
 		
 		// check if CSV file exists in assets folder
 		$csvFile = ASSETS_DIR . '/' . Convert::raw2sql($arguments['csv_file']);
-		$data = array();
 		if (Director::fileExists($csvFile)) {
 			$csv = new CSVParser($filename = $csvFile, $delimiter = '|', $enclosure = '"');
 			// iterate through imported Quotes|Author entries and store results in array
 			$citations = array();
 			foreach($csv as $row) {
-  				// only store entries with two data fields (quotation and author)
+				// only store entries with two data fields (quotation and author)
 				if (count($row) !== 2) continue;
-            	$citations[] = $row;
+				$citations[] = $row;
 			}
 
 			// prepare data for output (randomize array and fetch first citation for output)
-        	shuffle($citations);
+			shuffle($citations);
 			$data = $citations[0];
 		}
 		
