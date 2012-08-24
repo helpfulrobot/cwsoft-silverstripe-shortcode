@@ -1,17 +1,17 @@
-# Shortcode module for CMS SilverStripe 3
+# cwsoft-shortcode module for CMS SilverStripe 3.x
 This module provides some handy shortcode methods ready to use from your [SilverStripe CMS](http://silverstripe.org) WYSIWYG editor.
 
 The `cwsoft-shortcode` module builds up on the shortcode function first introduced with SilverStripe 2.4. Shortcodes can best be thought of a kind of placeholders entered in the WYSIWYG editor, which gets replaced with PHP output just before beeing displayed on the screen. This allows to add dynamic content to a specific position inside a WYSIWYG page.
 
 ----------------------------------------
-***Shortcode methods provided:***
+***cwsoft-shortcode methods provided:***
 
 - [cwsHideMailto](https://github.com/cwsoft/silverstripe-shortcode#shortcode-cwshidemailto): obfuscates the mailto part of mailto links
 - [cwsRandomQuote](https://github.com/cwsoft/silverstripe-shortcode#shortcode-cwsrandomquote): displays a random quote from a text file
 - [cwsRandomImage](https://github.com/cwsoft/silverstripe-shortcode#shortcode-cwsrandomimage): displays a random image from your assets folder
 
 ## Download
-The latest stable release of the `cwsoft-shortcode` module is available as ZIP or TAR archive in GitHubs [download area](https://github.com/cwsoft/silverstripe-shortcode/downloads). [Previous releases](https://github.com/cwsoft/silverstripe-shortcode/tags) are still available for download, but are no longer maintained. The development history of the shortcode module can be tracked via [GitHub](https://github.com/cwsoft/silverstripe-shortcode/commits/master).
+The latest stable release of the `cwsoft-shortcode` module is available as ZIP or TAR archive in GitHubs [download area](https://github.com/cwsoft/silverstripe-shortcode/downloads). [Older releases](https://github.com/cwsoft/silverstripe-shortcode/tags) are still available for download, but are no longer maintained. The development history of the cwsoft-shortcode module can be tracked via [GitHub](https://github.com/cwsoft/silverstripe-shortcode/commits/master).
 
 Note: An older, but unsupported version for SilverStripe 2.4.x can be found and downloaded in the [2.4.x branch](https://github.com/cwsoft/silverstripe-shortcode/tree/2.4.x) at GitHub.
 
@@ -31,7 +31,7 @@ The minimum requirements to get the cwsoft-shortcode module running on your Silv
 4. update your SilverStripe database via `http://yourdomain.com/dev/build?flush=all`
 
 ## Usage
-The shortcode methods are available in the WYSIWYG editor of your SilverStripe default page type. To use the shortcodes provided by the `cwsoft-shortcode` module, follow the steps below.
+The cwsoft-shortcode methods are available in the WYSIWYG editor of your SilverStripe default page type. To use the shortcodes provided by the `cwsoft-shortcode` module, follow the steps below.
 
 ### Shortcode: [cwsHideMailto]
 Enter the following shortcode into the WYSIWYG editor of a default page type to obfuscate a mailto link from spam bots.
