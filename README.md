@@ -35,10 +35,10 @@ The cwsoft-shortcode methods are available in the WYSIWYG editor of your SilverS
 
 ![](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/raw/master/.screenshots/cwsoft-shortcode-backend.png) 
 
-1. put the curor to the location in the WYSIWYG content field where you want to add the shortcode
-2. click on the cwsoft-shortcode plugin icon
+1. put the cursor to the location in the WYSIWYG content field where you want to add the shortcode
+2. click on the cwsoft-shortcode plugin icon (coffee icon)
 3. select the shortcode you want to use from the listbox
-4. update the placholder information with your data (e.g. image path, image orientation or mail address)
+4. update the shortcode skeleton code with your data (e.g. image path, image orientation, mail address ...)
 
 ### Shortcode: [cwsHideMailto]
 Enter the following shortcode into the WYSIWYG editor of a default page type to obfuscate a mailto link from spam bots.
