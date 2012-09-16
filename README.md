@@ -1,7 +1,7 @@
 # cwsoft-shortcode module for CMS SilverStripe 3.x
 This module provides some handy shortcode methods ready to use from your [SilverStripe CMS](http://silverstripe.org) WYSIWYG editor.
 
-The `cwsoft-shortcode` module builds up on the shortcode function first introduced with SilverStripe 2.4. Shortcodes can best be thought of a kind of placeholders entered in the WYSIWYG editor, which gets replaced with PHP output just before beeing displayed on the screen. This allows to add dynamic content to a specific position inside a WYSIWYG page.
+The `cwsoft-shortcode` module builds up on the shortcode function first introduced with SilverStripe 2.4. Shortcodes can best be thought of a kind of placeholders entered in the WYSIWYG editor, which gets replaced with PHP output just before beeing displayed on the screen. This allows to add dynamic content to a specific position inside a WYSIWYG page. The cwsoft-shortcode module adds another icon to the TinyMCE WYSIWYG editor, which allows you to select a shortcode from a list and to copy over the shortcode definition into your WYSIWYG content area.
 
 ----------------------------------------
 ***cwsoft-shortcode methods provided:***
@@ -31,7 +31,14 @@ The minimum requirements to get the cwsoft-shortcode module running on your Silv
 4. update your SilverStripe database via `http://yourdomain.com/dev/build?flush=all`
 
 ## Usage
-The cwsoft-shortcode methods are available in the WYSIWYG editor of your SilverStripe default page type. To use the shortcodes provided by the `cwsoft-shortcode` module, follow the steps below.
+The cwsoft-shortcode methods are available in the WYSIWYG editor of your SilverStripe default page type. The shortcodes provided by the `cwsoft-shortcode` module can be used within four simple steps as indicated on the screenshot below.
+
+![](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/raw/master/.screenshots/cwsoft-shortcode-backend.png) 
+
+1. put the curor to the location in the WYSIWYG content field where you want to add the shortcode
+2. click on the cwsoft-shortcode plugin icon
+3. select the shortcode you want to use from the listbox
+4. update the placholder information with your data (e.g. image path, image orientation or mail address)
 
 ### Shortcode: [cwsHideMailto]
 Enter the following shortcode into the WYSIWYG editor of a default page type to obfuscate a mailto link from spam bots.
@@ -65,7 +72,7 @@ Enter the following shortcode into the WYSIWYG editor of a default page type to 
 **Tip:** The alignment of the image can be set to left or right. The appearance of the thumbnail can be adjusted to your needs via template file *cwsoft-shortcode/templates/Include/RandomImage.ss* and the CSS file located in *cwsoft-shortcode/css/cwsShortCodeRandomImage.css*.
 
 A screenshot with the frontend output of the three shortcode methods is shown below:
-![](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/raw/master/.screenshots/cwsoft-shortcode.png) 
+![](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/raw/master/.screenshots/cwsoft-shortcode-frontend.png) 
 
 ## Known Issues
 Known issues can be tracked and reported via GitHubs [issue tracking service](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/issues). If you run into any issues with the cwsoft-shortcode module, visit the issue tracker and check if a similar issue was already reported. If not, just add a new topic descriping your issue.

@@ -9,7 +9,7 @@
  * 
  * @platform    CMS SilverStripe 3
  * @package     cwsoft-shortcode
- * @version     2.1.0
+ * @version     2.2.0
  * @author      cwsoft (http://cwsoft.de)
  * @copyright   cwsoft
  * @license     http://www.gnu.org/licenses/gpl-3.0.html
@@ -40,3 +40,8 @@ ShortcodeParser::get()->register('cwsRandomQuote', array('cwsShortCodeRandomQuot
 
 // increase default image quality of thumbnails
 GD::set_default_quality(95);
+
+// Note: If you see unparsed placeholders like "{#shortcode.dlg_description}" when using the TinyMCE cwsoft-shortcode plugin,
+// you need to add a plugin language file for your locale to the folder "./plugins/shortcode/langs". Supported locales: EN, DE.
+HtmlEditorConfig::get('cms')->enablePlugins(array('shortcode' => '../../../cwsoft-shortcode/plugins/shortcode/editor_plugin_src.js'));
+HtmlEditorConfig::get('cms')->addButtonsToLine(1, 'shortcode'); 
