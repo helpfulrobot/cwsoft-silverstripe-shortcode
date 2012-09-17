@@ -42,8 +42,8 @@ To use the shortcode methods provided by the `cwsoft-shortcode` module, just fol
 ### Shortcode: [cwsHideMailto]
 This shortcode allows you to obfuscate a mail address or a mailto link from beeing harvested by spam bots. This is done by replacing the characters "@" and "." of mail addresses with "(at)" and "(dot)". In addition the mailto link part will be encrypted with a simple Javascript Caeser cipher and automatically decrypted into human readable format when openend in an E-Mail program. This shortcode can be used in two different ways.
 
-        [cwsHideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[/cwsHideMailto]
-        [cwsHideMailto email='yourmail@domain.com' subject='optional_mail_subject']
+	[cwsHideMailto email='yourmail@domain.com' subject='optional_mail_subject']mail_link_text[/cwsHideMailto]
+	[cwsHideMailto email='yourmail@domain.com' subject='optional_mail_subject']
 
 ### Shortcode: [cwsRandomQuote]
 This shortcode allows you to displays a random quote from a textfile located in a subfolder in ***/assets***.
@@ -61,7 +61,7 @@ The textfile containing the quotes must follow the conventions below (***ensure*
 ### Shortcode: [cwsRandomImage]
 This shortcode allows you to display a random image with a jQuery ColorBox effect from a subfolder in ***/assets***.
 
-        [cwsRandomImage folder="subfolder_in_assets" align="left|right"]
+	[cwsRandomImage folder="subfolder_in_assets" align="left|right"]
 
 **Tip:** You can adjust the output to your needs via the template file *cwsoft-shortcode/templates/Include/RandomImage.ss* and the CSS file *cwsoft-shortcode/css/cwsShortCodeRandomImage.css*.
 
