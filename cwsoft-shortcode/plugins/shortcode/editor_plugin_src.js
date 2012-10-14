@@ -80,7 +80,7 @@
 		 */
 		getInfo : function() {
 			return {
-				longname : 'cwsoft-shortcoe Plugin',
+				longname : 'cwsoft-shortcode Plugin',
 				author : 'cwsoft',
 				authorurl : 'http://cwsoft.de',
 				infourl : 'http://cwsoft.de',
