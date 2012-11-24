@@ -22,7 +22,7 @@ The cwsoft-shortcode module is licensed under the [GNU General Public License (G
 The minimum requirements to get the cwsoft-shortcode module running on your SilverStripe installation are as follows:
 
 - SilverStripe ***3.0.x*** or higher (recommended last stable 3.x version)
-- PHP ***5.3*** or higher (recommended last stable PHP 5.3.x version)
+- PHP ***5.3*** or higher (recommended last stable PHP 5.4.x version)
 
 ## Installation
 1. download latest archive from GitHub [download area](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/downloads)
