@@ -11,7 +11,7 @@ The `cwsoft-shortcode` module builds up on the shortcode function first introduc
 - [cwsRandomImage](https://github.com/cwsoft/silverstripe-cwsoft-shortcode#shortcode-cwsrandomimage): displays a random image from your assets folder
 
 ## Download
-The latest stable release of the `cwsoft-shortcode` module is available as ZIP or TAR archive in GitHubs [download area](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/downloads). [Older releases](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/tags) are still available for download, but are no longer maintained. The development history of the cwsoft-shortcode module can be tracked via [GitHub](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/commits/master).
+You can download an archive of the latest development branch of the `cwsoft-foldergallery` module using GitHubs [ZIP button](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/archive/master.zip). The archives of previous module releases can be found in GitHubs [Tags section](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/tags). The development history is tracked via [GitHub](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/commits/master).
 
 Note: An older, but unsupported version for SilverStripe 2.4.x can be found and downloaded in the [2.4.x branch](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/tree/2.4.x) at GitHub.
 
@@ -25,7 +25,7 @@ The minimum requirements to get the cwsoft-shortcode module running on your Silv
 - PHP ***5.3*** or higher (recommended last stable PHP 5.4.x version)
 
 ## Installation
-1. download latest archive from GitHub [download area](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/downloads)
+1. download latest [module archive](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/archive/master.zip) from GitHub
 2. unpack the archive on your local computer
 3. upload the entire ***cwsoft-shortcode*** subfolder to your SilverStripe root folder using your preferred FTP program
 4. update your SilverStripe database via `http://yourdomain.com/dev/build?flush=all`
