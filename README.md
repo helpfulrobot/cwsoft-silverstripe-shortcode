@@ -33,7 +33,7 @@ The minimum requirements to get the cwsoft-shortcode module running on your Silv
 ## Usage
 To use the shortcode methods provided by the `cwsoft-shortcode` module, just follow the three steps shown in the sketch below.
 
-![](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/raw/master/.screenshots/cwsoft-shortcode-backend.png) 
+![](docs/cwsoft-shortcode-backend.png) 
 
 1. position the text cursor to the location you want insert the shortcode and press the Plugin icon (coffee cup)
 2. select the shortcode you want to use and press the insert button
@@ -66,7 +66,7 @@ This shortcode allows you to display a random image with a jQuery ColorBox effec
 **Tip:** You can adjust the output to your needs via the template file *cwsoft-shortcode/templates/Include/RandomImage.ss* and the CSS file *cwsoft-shortcode/css/cwsShortCodeRandomImage.css*.
 
 A screenshot with the frontend output of the three shortcode methods is shown below:
-![](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/raw/master/.screenshots/cwsoft-shortcode-frontend.png) 
+![](docs/cwsoft-shortcode-frontend.png) 
 
 ## Known Issues
 Known issues can be tracked and reported via GitHubs [issue tracking service](https://github.com/cwsoft/silverstripe-cwsoft-shortcode/issues). If you run into any issues with the cwsoft-shortcode module, visit the issue tracker and check if a similar issue was already reported. If not, just add a new topic descriping your issue.
