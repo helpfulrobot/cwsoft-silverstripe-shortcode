@@ -38,8 +38,14 @@ ShortcodeParser::get()->register('cwsHideMailto', array('cwsShortCodeHideMailto'
 ShortcodeParser::get()->register('cwsRandomImage', array('cwsShortCodeRandomImage', 'cwsShortCodeRandomImageHandler'));
 ShortcodeParser::get()->register('cwsRandomQuote', array('cwsShortCodeRandomQuote', 'cwsShortCodeRandomQuoteHandler'));
 
-// increase default image quality of thumbnails
-GD::set_default_quality(95);
+// increase quality of created thumbnails
+if (class_exists('GDBackend')) {
+	// SilverStripe >= 3.1.0
+	GDBackend::set_default_quality(95);
+} else {
+	// SilverStripe 3.0.x
+	GD::set_default_quality(95);
+}
 
 // Note: If you see unparsed placeholders like "{#shortcode.dlg_description}" when using the TinyMCE cwsoft-shortcode plugin,
 // you need to add a plugin language file for your locale to the folder "./plugins/shortcode/langs". Supported locales: EN, DE.

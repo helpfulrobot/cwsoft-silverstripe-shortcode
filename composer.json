@@ -9,7 +9,8 @@
         {
             "name": "cwsoft",
             "email": "info@cwsoft.de",
-            "homepage": "http://cwsoft.de"
+            "homepage": "http://cwsoft.de",
+            "role": "Developer"
         }
     ],
     "require": {
