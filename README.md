@@ -1,5 +1,5 @@
 # cwsoft-shortcode module for CMS SilverStripe 3.x
-This module provides some handy shortcode methods ready to use from your [SilverStripe CMS](http://silverstripe.org) WYSIWYG editor.
+This module provides some handy shortcode methods ready to use from your [SilverStripe CMS <= v3.1.1](http://silverstripe.org) WYSIWYG editor.
 
 The `cwsoft-shortcode` module builds up on the shortcode function first introduced with SilverStripe 2.4. Shortcodes can best be thought of a kind of placeholders entered in the WYSIWYG editor, which gets replaced with PHP output just before beeing displayed on the screen. This allows to add dynamic content to a specific position inside a WYSIWYG page. The available cwsoft-shortcode methods can easily be selected from the WYSIWYG editor.
 
@@ -21,7 +21,7 @@ The cwsoft-shortcode module is licensed under the [GNU General Public License (G
 ## Requirements
 The minimum requirements to get the cwsoft-shortcode module running on your SilverStripe installation are as follows:
 
-- SilverStripe ***3.0.x*** or higher (recommended last stable 3.x version)
+- SilverStripe 3 series ***<= 3.1.1*** (template support was removed from shortcodes with SS > 3.1.1)
 - PHP ***5.3*** or higher (recommended last stable PHP 5.4.x version)
 
 ## Installation
