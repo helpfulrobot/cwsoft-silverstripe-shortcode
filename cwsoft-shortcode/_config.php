@@ -9,7 +9,7 @@
  * 
  * @platform    CMS SilverStripe 3
  * @package     cwsoft-shortcode
- * @version     2.2.3
+ * @version     2.2.4
  * @author      cwsoft (http://cwsoft.de)
  * @copyright   cwsoft
  * @license     http://www.gnu.org/licenses/gpl-3.0.html
