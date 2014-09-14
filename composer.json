@@ -1,5 +1,5 @@
 {
-    "name": "cwsoft/silverstripe-cwsoft-shortcode",
+    "name": "cwsoft/silverstripe-shortcode",
     "type": "silverstripe-module",
     "description": "Adds some handy shortcodes allowing you to obfuscate email links, display random images or random quotes on your Silverstripe CMS website.",
     "keywords": ["silverstripe", "shortcodes", "cwsoft-shortcode", "cwsoft"],
